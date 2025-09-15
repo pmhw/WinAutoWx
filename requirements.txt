@@ -1,0 +1,8 @@
+pywinauto==0.6.8
+psutil==5.9.8
+pyperclip==1.9.0
+fastapi==0.115.12
+uvicorn==0.30.6
+pydantic==2.8.2
+fastmcp==2.0.0
+httpx==0.27.0

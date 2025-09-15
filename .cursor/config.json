@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+        "weixin": {
+            "command": "python",
+            "args": ["D:\\代码存储\\winautowx\\mcp_server.py"],
+            "cwd": "D:\\代码存储\\winautowx",
+            "transport": "stdio",
+            "env": {
+                "WEIXIN_API_URL": "http://127.0.0.1:8000"
+            }
+        }
+    }
+  }

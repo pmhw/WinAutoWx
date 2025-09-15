@@ -1,0 +1,13 @@
+{
+    "servers": {
+      "weixin": {
+        "name": "weixin-auto-sender",
+        "command": "python",
+        "args": ["mcp_server.py"],
+        "cwd": "C:\\winautowx",
+        "env": { "WEIXIN_API_URL": "http://127.0.0.1:8000" },
+        "transport": "stdio"
+      }
+    }
+  }
+
