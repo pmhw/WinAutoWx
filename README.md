@@ -6,6 +6,10 @@
 ![](./png/image.png)
 
 
+交流群
+
+![](./png/35c6fe96f9109015aad90f62d1b1de8b.jpg)
+
 ## 启动指令速查
 - 命令行（CLI 用法已迁移至 Debug 文档）
 请参考 `Debug.md` 获取 `run_wechat.py` 的命令行用法与调试说明。
