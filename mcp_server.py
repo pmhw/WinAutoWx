@@ -38,7 +38,8 @@ async def send_messages(
 
     返回：JSON 结果
     """
-    async with httpx.AsyncClient(timeout=60.0) as client:
+    # 显式禁用系统代理环境（trust_env=False），避免 TUN/代理劫持本地请求
+    async with httpx.AsyncClient(timeout=60.0, trust_env=False) as client:
         resp = await client.post(
             f"{API_URL}/send",
             json={
@@ -61,8 +62,7 @@ async def dump_controls(
     verbose: bool = True,
 ) -> dict:
     """导出 Weixin 主窗口的前若干个控件信息（通过本地 HTTP 自动化服务）。"""
-    # proxies=None, trust_env=False,
-    async with httpx.AsyncClient(timeout=60.0, proxies=None, trust_env=False) as client:
+    async with httpx.AsyncClient(timeout=60.0, trust_env=False) as client:
         resp = await client.post(
             f"{API_URL}/dump",
             json={
