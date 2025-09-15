@@ -61,7 +61,8 @@ async def dump_controls(
     verbose: bool = True,
 ) -> dict:
     """导出 Weixin 主窗口的前若干个控件信息（通过本地 HTTP 自动化服务）。"""
-    async with httpx.AsyncClient(timeout=60.0) as client:
+    # proxies=None, trust_env=False,
+    async with httpx.AsyncClient(timeout=60.0, proxies=None, trust_env=False) as client:
         resp = await client.post(
             f"{API_URL}/dump",
             json={
